@@ -335,6 +335,22 @@ Driven by curiosity and a commitment to innovation, I aim to contribute meaningf
     </div>
 </section>
 
+  <!-- Visitor Counter -->
+<div style="text-align:center; margin-top: 40px; font-size: 18px;">
+    🚀 This page has been visited <span id="visits">...</span> times.
+</div>
+
+<script>
+    fetch('https://api.countapi.xyz/update/swanand66/portfolio/?amount=1')
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById('visits').innerText = data.value;
+    });
+</script>
+
+<script src="js/script.js"></script>
+</body>
+
 
 
   <script src="js/script.js"></script>
