@@ -497,10 +497,20 @@ section {
   background-color: var(--bg-color);
 }
 
+/* UPDATED Projects Section CSS */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
   gap: 2.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Center the last card if there's an odd number (5 cards = last one centered) */
+.project-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1; /* Span across both columns */
+  max-width: calc(50% - 1.25rem); /* Match width of other cards */
+  margin: 0 auto; /* Center it horizontally */
 }
 
 .project-card {
@@ -521,8 +531,8 @@ section {
 
 .project-img img {
   transition: var(--transition);
-  height: 240px;
-  width: 100%;
+  height: 370px;
+  width: 200%;
   object-fit: cover;
 }
 
