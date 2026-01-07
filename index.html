@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<!-- YouTube: CodeWithHim -->
+
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio - CodeWithHim</title>
+  <title>My Portfolio </title>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+  <canvas id="bg-canvas"></canvas>
   <header>
-    <a href="#" class="logo">CodeWithHim.</a>
+    <a href="#" class="logo">My portfolio.</a>
     <div class="hamburger">
       <span class="bar"></span>
       <span class="bar"></span>
@@ -21,36 +22,47 @@
     <ul class="navmenu">
       <li><a href="#home">Home</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#blogs">Blogs</a></li>
+      <li>
+        <div class="theme-btn"><i class="ph-bold ph-moon"></i></div>
+      </li>
     </ul>
   </header>
 
   <section class="home" id="home">
     <div class="home-text">
-      <h2>Hello, I'm Himanshu <i class="ph-bold ph-hand-waving"></i></h2>
-      <h3>Frontend Developer</h3>
+      <h2>Hello, I'm Swanand <i class="ph-bold ph-hand-waving"></i></h2>
+
       <p>
-        I'm a frontend developer based in Nepal, passionate about creating
-        beautiful and functional user interfaces. With a strong dedication to
-        my craft, I focus on writing clean, responsive code and delivering
-        high-quality web experiences that blend creativity and performance.
+
+        I'm an aspiring Software Engineer based in Pune, passionate about creating impactful digital solutions. I focus
+        on writing clean, efficient code and building user-centric applications that balance functionality with
+        performance.
+
+        With a strong interest in AI and Machine Learning, I’ve worked on projects in data analysis, predictive
+        modeling, and NLP. I’m continually learning about neural networks, computer vision, and generative AI to build
+        scalable, ethical solutions that solve real-world problems.
+
+        Driven by curiosity and a commitment to innovation, I aim to contribute meaningfully to the tech community..
       </p>
       <div class="home-btn">
-        <a href="#" class="btn">Contact Info</a>
-        <a href="#" class="btn">Download CV <i class="ph ph-read-cv-logo"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=swanandvaidya2204@gmail.com" class="btn"
+          target="_blank">Contact</a>
+        <a href="https://www.dropbox.com/scl/fi/bme90ltyesz615ec1wwvm/SwanandVaidya_Resume.pdf?rlkey=chq6g2n36amyvtc8i3x8h85kt&st=8oc9ozf7&dl=0"
+          class="btn">Download Resume <i class="ph ph-read-cv-logo"></i></a>
       </div>
     </div>
     <div class="home-png">
-      <img src="images/image.png" alt="Home Image" />
+      <img src="Portfolio\images\ChatGPT_Image_Jul_15__2025__12_07_22_AM-removebg-preview.png" alt="Home Image" />
     </div>
   </section>
   <span class="label">Follow Me</span>
   <div class="socials-icons">
-    <a href="#"><i class="ph-bold ph-linkedin-logo"></i></a>
-    <a href="#"><i class="ph-bold ph-instagram-logo"></i></a>
-    <a href="#"><i class="ph-bold ph-github-logo"></i></a>
+    <a href="https://www.linkedin.com/in/swanandvaidya"><i class="ph-bold ph-linkedin-logo"></i></a>
+    <a href="https://www.instagram.com/swanand_vaidya22/?__pwa=1"><i class="ph-bold ph-instagram-logo"></i></a>
+    <a href="https://github.com/Swanand66"><i class="ph-bold ph-github-logo"></i></a>
   </div>
   <a href="#skills" class="scroll-btn">Scroll Down <i class="ph-bold ph-arrow-bend-right-down"></i></a>
 
@@ -63,309 +75,348 @@
     <div class="skills-container">
       <div class="skill-card">
         <i class="ph-bold ph-code"></i>
-        <h3>Frontend Development</h3>
-        <p>HTML, CSS, JavaScript, React, Vue.js, Responsive Design</p>
+        <h3>Programming & Scripting</h3>
+        <p>Python, Java, JavaScript, C++</p>
       </div>
       <div class="skill-card">
         <i class="ph-bold ph-device-mobile"></i>
-        <h3>UI/UX Design</h3>
-        <p>Figma, Adobe XD, Wireframing, Prototyping, User Research</p>
+        <h3>AI Frameworks & Libraries</h3>
+        <p>Matplotlib, NumPy, Langchain/Langraph, Pandas, SciPy, Scikit-Learn, Pytorch, TensorFlow, NLTK</p>
       </div>
       <div class="skill-card">
         <i class="ph-bold ph-database"></i>
-        <h3>Backend Development</h3>
-        <p>Node.js, Express, MongoDB, Firebase, RESTful APIs</p>
+        <h3>Databases</h3>
+        <p>MongoDB, MySQL</p>
       </div>
       <div class="skill-card">
         <i class="ph-bold ph-git-branch"></i>
         <h3>Version Control</h3>
-        <p>Git, GitHub, GitLab, CI/CD, Agile Methodology</p>
+        <p>Git, GitHub, GitLab, CI/CD</p>
       </div>
       <div class="skill-card">
         <i class="ph-bold ph-wrench"></i>
         <h3>Tools & Technologies</h3>
         <p>
-          VS Code, Figma, Adobe XD, Sketch, Jira, Confluence, Notion, Figjam,
-          Miro, Slack, Zoom, Trello
+          Google Cloud Platform (GCP), HTML/CSS, Docker, AWS
         </p>
       </div>
       <div class="skill-card">
         <i class="ph-bold ph-users"></i>
-        <h3>Others</h3>
+        <h3>AI Models & Technologies</h3>
         <p>
-          Problem Solving, Critical Thinking, Time Management, Adaptability
+          Mistral , Ollama(Llama3,Llama2), Generative AI concepts (text, content generation), Prompt Engineering
         </p>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about" id="about">
+  <section class="experience" id="experience">
     <div class="section-header">
-      <h2>About Me</h2>
+      <h2>Experience</h2>
       <div class="section-line"></div>
     </div>
-    <div class="about-container">
-      <div class="about-image">
-        <img src="images/image.png" alt="About Me Image" />
+    <div class="experience-grid">
+      <div class="experience-card">
+        <p class="experience-year">NOV 2025 - JAN 2026</p>
+        <h3 class="experience-title">SDE Intern</h3>
+        <p class="experience-company">Layerpath</p>
+        <p class="experience-description">
+          Layerpath leverages AI to help businesses create, personalize, and scale interactive product experiences.
+          Their flagship 'Path AI' agent provides every visitor with a 1:1 demo environment, transforming product
+          exploration into a qualified sales pipeline.
+        </p>
+        <ul class="experience-details">
+          <li><strong>Path AI Development:</strong> Worked on improving Path AI, their voice-first AI agent,
+            contributing to feature enhancements and performance optimization.</li>
+          <li><strong>Quality Assurance:</strong> Conducted comprehensive testing and evaluation of the AI agent to
+            ensure reliability and user experience quality.</li>
+          <li><strong>UI/UX Implementation:</strong> Contributed to user interface and experience improvements across
+            the product.</li>
+        </ul>
       </div>
-      <div class="about-content">
-        <h3>Frontend Developer & UI Designer</h3>
-        <p>
-          I'm a passionate frontend developer based in Nepal with a strong
-          focus on creating responsive and user-friendly web applications.
-          With a keen eye for design and attention to detail, I strive to
-          build seamless digital experiences.
+      <div class="experience-card">
+        <p class="experience-year">FEB 2025-SEP 2025</p>
+        <h3 class="experience-title">AI/ML Intern</h3>
+        <p class="experience-company">NEON AI</p>
+        <p class="experience-description">
+          Neon AI/UK helps organizations measure and improve training impact using AI-powered learning platforms with
+          analytics, chatbots, and MLOps.
         </p>
-        <p>
-          My journey in web development began 3 years ago, and since then,
-          I've worked on various projects that have helped me refine my skills
-          and stay updated with the latest technologies and trends in the
-          industry.
+        <ul class="experience-details">
+
+          <li>Developed multiple smart AI agents using LangChain, LangGraph, and LLMs to automate workflows;
+            successfully deployed them in real-world scenarios.</li>
+          <li>Worked on radiology-focused projects, experimenting with AI integration for medical imaging support and
+            diagnostic assistance.</li>
+          <li>Trained machine learning models that achieved high accuracy in delivering reliable results and enhancing
+            overall performance.</li>
+
+
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <p class="experience-year">JAN 2025- FEB 2025</p>
+        <h3 class="experience-title">Python Developer Intern</h3>
+        <p class="experience-company">SOFT THE NEXT</p>
+        <p class="experience-description">
+          Soft The Next is a Pune-based software house that builds custom ERP, web, and mobile applications across a
+          broad spectrum of industries—from banking and healthcare to agriculture and education—backed by active digital
+          and app presence.
         </p>
-        <div class="about-info">
-          <div class="info-item">
-            <span>Name:</span>
-            <p>Himanshu Dhakal</p>
-          </div>
-          <div class="info-item">
-            <span>Email:</span>
-            <p>contact@codewithim.com</p>
-          </div>
-          <div class="info-item">
-            <span>Location:</span>
-            <p>Kathmandu, Nepal</p>
-          </div>
-          <div class="info-item">
-            <span>Freelance:</span>
-            <p>Available</p>
-          </div>
-        </div>
-        <a href="#" class="btn">Download Resume</a>
+        <ul class="experience-details">
+          <li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth
+            and 30% increase in conversion rate YoY.</li>
+          <li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI,
+            tableau and Python.</li>
+          <li>Performed migration and enhancements for merchandising dashboard, involved data integration.</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section class="projects" id="projects">
     <div class="section-header">
       <h2>My Projects</h2>
       <div class="section-line"></div>
     </div>
     <div class="projects-container">
-      <div class="project-card">
-        <div class="project-img">
-          <img src="images/project1.png" alt="Project 1" />
-        </div>
-        <div class="project-content">
-          <h3>Fried Chicken Website</h3>
-          <p>
-            A responsive chicken website showcasing my projects and skills,
-            built with HTML, CSS, and JavaScript with a focus on responsive
-            design and smooth animations.
-          </p>
-          <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="btn">Live Demo</a>
-            <a href="#" class="btn">View Code</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-img">
-          <img src="images/project2.png" alt="Project 2" />
-        </div>
-        <div class="project-content">
-          <h3>Responsive Car Website</h3>
-          <p>
-            A responsive car website showcasing my projects and skills, built
-            with HTML, CSS, and JavaScript with a focus on responsive design
-            and smooth animations.
-          </p>
-          <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="btn">Live Demo</a>
-            <a href="#" class="btn">View Code</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-img">
-          <img src="images/project3.png" alt="Project 3" />
-        </div>
-        <div class="project-content">
-          <h3>Responsive Pizza Website</h3>
-          <p>
-            A responsive pizza website showcasing my projects and skills,
-            built with HTML, CSS, and JavaScript with a focus on responsive
-            design and smooth animations.
-          </p>
-          <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="btn">Live Demo</a>
-            <a href="#" class="btn">View Code</a>
-          </div>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-img">
-          <img src="images/project4.png" alt="Project 4" />
-        </div>
-        <div class="project-content">
-          <h3>Responsive Burger Website</h3>
 
+      <!-- NEW PROJECT CARD #1 -->
+      <div class="project-card">
+        <div class="project-img">
+          <img src="C:\Users\SWANAND\Desktop\portfolio\Portfolio\images\image.png" alt="Resume Parser AI" />
+        </div>
+        <div class="project-content">
+          <h3>Privacy-First Agentic AI CRM </h3>
           <p>
-            A responsive burger website showcasing my projects and skills,
-            built with HTML, CSS, and JavaScript with a focus on responsive
-            design and smooth animations.
+            An on-premises, multi-agent AI system that maintains complete data sovereignty
+            by keeping all information within the organization's infrastructure. The CRM
+            utilizes six specialized AI agents to automate client relationship management,
+            lead nurturing, and sales workflows while ensuring enterprise-level privacy and
+            security compliance for sensitive customer data.
           </p>
           <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
+            <span>Python</span>
+            <span>FastAPI</span>
+            <span>React</span>
+            <span>Lead Nurturing</span>
+            <span>Multi-Agent AI</span>
+            <span>LangGraph</span>
+            <span>LLM</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/Swanand66/Privacy-First-Agentic-AI_CRM_" class="btn">View Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- HR AGENT #2 -->
+      <div class="project-card">
+        <div class="project-img">
+          <img src="images/SMART HR AGENT (1).png" alt="Project 3" />
+        </div>
+        <div class="project-content">
+          <h3>AI-Powered HR Agent</h3>
+          <p>
+            An AI-powered tool that streamlines HR workflows by generating customized policies, comparing job
+            descriptions with resumes, and ranking candidates using LLMs.
+          </p>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>FastAPI</span>
+            <span>LLM</span>
+            <span>LangChain</span>
           </div>
           <div class="project-links">
-            <a href="#" class="btn">Live Demo</a>
+            <a href="https://github.com/Swanand66/Smart-JD-Comparison-agent" class="btn">View Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- K-MEANS #3 -->
+      <div class="project-card">
+        <div class="project-img">
+          <img src="images/8629450c-9579-42f7-9913-2a7a92e90748.png" alt="Project 3" />
+        </div>
+        <div class="project-content">
+          <h3>Data driven-customer segmentation using k-means</h3>
+          <p>
+            This project performs customer segmentation using online retail transactional data. It likely uses
+            clustering algorithms, such as K-Means, to group customers based on their purchasing behavior. The goal is
+            to identify distinct customer segments for purposes like targeted marketing
+          </p>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>K-Means</span>
+            <span>Pandas</span>
+            <span>Matplotlib</span>
+            <span>Scikit-learn</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Swanand66/data-driven-customer-segmentation-using-k-means" class="btn">View
+              Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SNEAKER WEBSITE #4 -->
+      <div class="project-card">
+        <div class="project-img">
+          <img src="images/logo22.jpg" alt="Project 4" />
+        </div>
+        <div class="project-content">
+          <h3>Sneaker Website</h3>
+          <p>
+            A simple e-commerce prototype showcasing product listings, cart management, and a smooth shopping workflow,
+            allowing users to browse, add, and remove items with ease.
+          </p>
+          <div class="project-tags">
+            <span>React</span>
+            <span>Tailwind CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Swanand66/KicksCart/tree/main/sample-project" class="btn">View Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TURF LOCATOR #5 -->
+      <div class="project-card">
+        <div class="project-img">
+          <img src="images/Gemini_Generated_Image_ntf0tpntf0tpntf0.png" alt="Project 1" />
+        </div>
+        <div class="project-content">
+          <h3>Turf Locator</h3>
+          <p>
+            Developed a pilot-phase mobile app, A mobile app that helps users find nearby turfs and connect with
+            players, making it easier to book grounds and organize matches.
+          </p>
+          <div class="project-tags">
+            <span>Google Maps API</span>
+            <span>Figma</span>
+          </div>
+          <div class="project-links">
             <a href="#" class="btn">View Code</a>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <section class="blogs" id="blogs">
+    <div class="section-header">
+      <h2>My Blog Posts</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="blogs-container">
+      <div class="blog-card">
+        <div class="blog-img">
+          <img src="images\nature.jpg" alt="Blog Post 1 Image" />
+        </div>
+        <div class="blog-content">
+          <h3>Go East: Discovering Kazakhstan!</h3>
+          <p>
+            Kazakhstan, surprisingly, emerged as my absolute favorite travel destination, largely due to its remarkable
+            combination of diverse experiences and consistently ideal weather that perfectly complemented every
+            adventure. From Almaty's vibrant city life nestled against the majestic Tian Shan mountains, to the serene
+            beauty of Kolsay Lakes and the thrilling snowy slopes of Shymbulak ......
+          </p>
+          <div class="blog-meta">
+            <span><i class="ph-bold ph-calendar"></i>2023</span>
+            <span><i class="ph-bold ph-tag"></i> Travel, Kolsay Lake, Shymbulak, Kok Tobe Hill</span>
+          </div>
+          <div class="blog-links">
+            <a href="Blogs\kazakh trip.html" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-img">
+          <img src="images\virat-kohli--rohit-sharma-153926332-16x9_0.avif" alt="Blog Post 2 Image" />
+        </div>
+        <div class="blog-content">
+          <h3>Trophy Tidal Wave!</h3>
+          <p>
+            As a die-hard cricket fan, this was, without a doubt, the greatest year to witness history unfold! To see
+            Team India not only break their long ICC trophy drought by clinching the T20 World Cup in 2024 but then
+            follow it up with a dominant Champions Trophy win in 2025 was monumental. Yet, perhaps the sweetest victory
+            of all was watching my beloved RCB finally lift their first-ever trophy. This unprecedented......
+          </p>
+          <div class="blog-meta">
+            <span><i class="ph-bold ph-calendar"></i>2024 - 2025</span>
+            <span><i class="ph-bold ph-tag"></i>Historic Win, Trophy Season, Unforgettable</span>
+          </div>
+          <div class="blog-links">
+            <a href="Blogs\cricket.html" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <section class="contact" id="contact">
     <div class="section-header">
       <h2>Contact Me</h2>
       <div class="section-line"></div>
     </div>
     <div class="contact-container">
+      <div class="contact-form">
+        <h3>Want to connect?</h3>
+        <p>Click the button below to fill the contact form:</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdn6IDBlr3p69DEyQuyiw2hWuKjD68PEYn2vx_LlUevjOK7_g/viewform?embedded=true"
+          target="_blank" class="btn">
+          Connect with Me <i class="ph-bold ph-paper-plane-right"></i>
+        </a>
+      </div>
+
       <div class="contact-info">
         <h3>Get In Touch</h3>
         <p>
-          Feel free to reach out to me for any questions, project inquiries,
+          Feel free to reach out to me for any questions
           or just to say hello!
         </p>
         <div class="info-box">
           <i class="ph-bold ph-envelope"></i>
           <div>
             <h4>Email</h4>
-            <p>contact@codewithim.com</p>
+            <p>swanandvaidya2204@gmail.com</p>
           </div>
         </div>
         <div class="info-box">
           <i class="ph-bold ph-map-pin"></i>
           <div>
             <h4>Location</h4>
-            <p>Kathmandu, Nepal</p>
+            <p>Pune, Maharashtra</p>
           </div>
         </div>
         <div class="info-box">
           <i class="ph-bold ph-phone"></i>
           <div>
             <h4>Phone</h4>
-            <p>+977 9800000000</p>
+            <p>+91 8767357281</p>
           </div>
         </div>
         <div class="contact-social">
-          <a href="#"><i class="ph-bold ph-linkedin-logo"></i></a>
-          <a href="#"><i class="ph-bold ph-instagram-logo"></i></a>
-          <a href="#"><i class="ph-bold ph-github-logo"></i></a>
-          <a href="#"><i class="ph-bold ph-twitter-logo"></i></a>
+          <a href="https://www.linkedin.com/in/swanandvaidya"><i class="ph-bold ph-linkedin-logo"></i></a>
+          <a href="https://www.instagram.com/swanand_vaidya22/?__pwa=1"><i class="ph-bold ph-instagram-logo"></i></a>
+          <a href="https://github.com/Swanand66"><i class="ph-bold ph-github-logo"></i></a>
+
         </div>
-      </div>
-      <div class="contact-form">
-        <form>
-          <div class="input-row">
-            <div class="input-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" placeholder="Enter your name" required />
-            </div>
-            <div class="input-group">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" placeholder="Enter your email" required />
-            </div>
-          </div>
-          <div class="input-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Enter subject" required />
-          </div>
-          <div class="input-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="6" placeholder="Enter your message" required></textarea>
-          </div>
-          <button type="submit" class="btn">
-            Send Message <i class="ph-bold ph-paper-plane-right"></i>
-          </button>
-        </form>
       </div>
     </div>
   </section>
+  </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-top">
-        <div class="footer-logo">
-          <a href="#" class="logo">CodeWithHim.</a>
-          <p>
-            Creating beautiful digital experiences with clean and efficient
-            code.
-          </p>
-        </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">UI/UX Design</a></li>
-            <li><a href="#">Mobile Development</a></li>
-            <li><a href="#">Consulting</a></li>
-          </ul>
-        </div>
-        <div class="footer-newsletter">
-          <h4>Newsletter</h4>
-          <p>Subscribe to receive updates and news</p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit" class="btn">Subscribe</button>
-          </form>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 CodeWithHim. All Rights Reserved.</p>
-        <div class="footer-social">
-          <a href="#"><i class="ph-bold ph-linkedin-logo"></i></a>
-          <a href="#"><i class="ph-bold ph-instagram-logo"></i></a>
-          <a href="#"><i class="ph-bold ph-github-logo"></i></a>
-          <a href="#"><i class="ph-bold ph-twitter-logo"></i></a>
-        </div>
-      </div>
-    </div>
-  </footer>
+
+
 
   <script src="js/script.js"></script>
+  <script src="js/bg-animation.js"></script>
 </body>
 
 </html>

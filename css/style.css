@@ -2,13 +2,41 @@
 
 :root {
   --bg-color: #f7f7f2;
+  --card-bg-color: #fff;
   --text-color: #1e1e24;
+  --text-secondary: #555;
+  --text-muted: #444;
   --max-width: 1200px;
   --accent-color: #1e1e24;
   --section-padding: 5rem 8%;
   --transition: all 0.5s ease;
   --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --border-radius: 0.5rem;
+  --header-bg: rgba(247, 247, 242, 0.9);
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --card-bg-color: #1e1e1e;
+  --text-color: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --text-muted: #a0a0a0;
+  --accent-color: #e0e0e0;
+  --box-shadow: 0 4px 6px rgba(255, 255, 255, 0.05);
+  --header-bg: rgba(18, 18, 18, 0.9);
+}
+
+.theme-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.theme-btn:hover {
+  transform: rotate(15deg) scale(1.1);
 }
 
 * {
@@ -30,6 +58,25 @@ body {
   padding: 0;
 }
 
+
+/* Background Canvas */
+canvas#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+header,
+section,
+footer {
+  position: relative;
+  z-index: 2;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -40,7 +87,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 8%;
-  background-color: rgba(247, 247, 242, 0.9);
+  background-color: var(--header-bg);
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
 }
@@ -238,6 +285,7 @@ img {
 .scroll-btn i {
   transition: all 0.5s;
 }
+
 .scroll-btn i:hover {
   transform: rotate3d(0, 0, 1, 45deg);
 }
@@ -279,7 +327,7 @@ section {
 }
 
 .skill-card {
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   padding: 2rem;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -312,13 +360,14 @@ section {
 }
 
 .skill-card p {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
 /* About Section */
+/* About Section */
 .about {
-  background-color: #f7f7f2;
+  background-color: var(--bg-color);
 }
 
 .about-container {
@@ -373,19 +422,192 @@ section {
   margin-right: 0.5rem;
 }
 
+/* Experience Section - MODIFIED FOR WHITE BACKGROUND & BLACK TEXT */
+.experience {
+  padding: 60px 0;
+  /* Or use var(--section-padding) if you want consistent padding */
+  background-color: var(--bg-color);
+  /* Use your global light background variable */
+  color: var(--text-color);
+  /* Use your global dark text color variable */
+}
+
+/* Re-using existing .section-header and .section-line from your current CSS,
+   and adjusting colors for the light theme */
+.experience .section-header h2 {
+  color: var(--text-color);
+  /* Black for the heading */
+}
+
+.experience .section-line {
+  background-color: var(--text-color);
+  /* Black color for the line (or keep gold if preferred) */
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Two equal columns */
+  gap: 30px;
+  /* Space between cards */
+  max-width: var(--max-width);
+  /* Use your defined max-width */
+  margin: 0 auto;
+  padding: 0 8%;
+  /* Use 8% padding to match your other sections */
+}
+
+.experience-card {
+  background-color: var(--card-bg-color);
+  /* Use variable for background */
+  padding: 30px;
+  border-radius: var(--border-radius);
+  /* Use your defined border-radius */
+  box-shadow: var(--box-shadow);
+  /* Use your global box-shadow variable */
+  display: flex;
+  flex-direction: column;
+  border-top: 5px solid var(--text-color);
+  /* Added a black top border similar to skill-card */
+}
+
+.experience-card .experience-year {
+  color: var(--text-color);
+  /* Gold/yellow for the year - KEEPING THIS ACCENT */
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.experience-card .experience-title {
+  color: var(--text-color);
+  /* Black for the title */
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+.experience-card .experience-company {
+  color: var(--text-secondary);
+  /* Darker grey for company name */
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.experience-card .experience-description {
+  color: var(--text-muted);
+  /* Darker grey for description */
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.experience-card .experience-details {
+  list-style: none;
+  /* Remove default bullet */
+  padding: 0;
+  margin: 0;
+  color: var(--text-muted);
+  /* Darker grey for list text */
+}
+
+.experience-card .experience-details li {
+  position: relative;
+  padding-left: 20px;
+  /* Space for custom bullet */
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.experience-card .experience-details li::before {
+  content: '\2022';
+  /* Unicode for a small dot bullet */
+  color: var(--text-color);
+  /* Gold/yellow bullet - KEEPING THIS ACCENT */
+  font-size: 1.2em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Center the last experience card if there's an odd number */
+.experience-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  /* Span across both columns */
+  max-width: calc(50% - 15px);
+  /* Match width of other cards (50% - half gap) */
+  margin: 0 auto;
+  /* Center it horizontally */
+  width: 100%;
+  /* Ensure it takes the calculated max-width */
+}
+
+/* Responsive adjustments for Experience Section */
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    /* Stack cards vertically on smaller screens */
+  }
+
+  .experience .section-header h2 {
+    font-size: 2.5em;
+    /* Adjust font size for responsiveness if needed */
+  }
+}
+
+@media (max-width: 480px) {
+  .experience .section-header h2 {
+    font-size: 1.5rem;
+    /* Match other section headers on tiny screens */
+  }
+}
+
+/* Responsive adjustments for Experience Section */
+@media (max-width: 768px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    /* Stack cards vertically on smaller screens */
+  }
+
+  .experience .section-header h2 {
+    font-size: 2.5em;
+    /* Adjust font size for responsiveness if needed */
+  }
+}
+
+@media (max-width: 480px) {
+  .experience .section-header h2 {
+    font-size: 1.5rem;
+    /* Match other section headers on tiny screens */
+  }
+}
+
 /* Projects Section */
 .projects {
   background-color: var(--bg-color);
 }
 
+/* UPDATED Projects Section CSS */
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  /* Two equal columns */
   gap: 2.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Center the last card if there's an odd number (5 cards = last one centered) */
+.project-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  /* Span across both columns */
+  max-width: calc(50% - 1.25rem);
+  /* Match width of other cards */
+  margin: 0 auto;
+  /* Center it horizontally */
 }
 
 .project-card {
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--box-shadow);
@@ -402,8 +624,8 @@ section {
 
 .project-img img {
   transition: var(--transition);
-  height: 240px;
-  width: 100%;
+  height: 370px;
+  width: 200%;
   object-fit: cover;
 }
 
@@ -421,7 +643,7 @@ section {
 }
 
 .project-content p {
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
   line-height: 1.6;
@@ -435,7 +657,9 @@ section {
 }
 
 .project-tags span {
-  background-color: #f0f0f0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -448,27 +672,55 @@ section {
 }
 
 /* Contact Section */
+/* Contact Section */
 .contact {
-  background-color: #f9f9f7;
+  background-color: var(--bg-color);
 }
 
 .contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  /* Stacks main items (form and info) vertically and centers them */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 3rem;
 }
+
+.contact-form {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-info {
+  width: 100%;
+  /* Allows it to take full width of parent (contact-container) */
+  max-width: 600px;
+  /* Limits the overall width of the info block */
+
+  /* NEW: Make contact-info a column container for its children */
+  display: flex;
+  flex-direction: column;
+  /* Stacks children (p, info-boxes, social) vertically */
+  align-items: center;
+  /* Centers children (like p, info-boxes, social) horizontally */
+  gap: 1.5rem;
+  /* Space between stacked elements like paragraph and info-boxes */
+}
+
 
 .contact-info h3 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   position: relative;
+  text-align: center;
 }
 
 .contact-info h3::after {
   content: "";
   position: absolute;
   bottom: -3px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 20%;
   height: 2px;
   background-color: var(--text-color);
@@ -477,18 +729,47 @@ section {
 .contact-info p {
   margin-bottom: 1rem;
   line-height: 1.6;
+  text-align: center;
+  /* Centers the paragraph text */
 }
 
+
 .info-box {
+  /* Keeps icon and text side-by-side within the box */
   display: flex;
-  align-items: flex-start;
-  /* margin-bottom: 1.5rem; */
+  align-items: center;
+  /* Vertically centers the icon and the text block */
+  justify-content: center;
+  /* Horizontally centers the combined icon+text block within the info-box's width */
+
+  /* NEW: Control the width of each individual info-box when stacked */
+  width: 100%;
+  /* Take full width of parent (.contact-info) up to its max-width */
+  max-width: 400px;
+  /* Optional: Limit width for better readability when stacked */
+
+  /* Add visual styling for each info-box */
+  padding: 10px;
+  border: 1px solid var(--text-color);
+  border-radius: var(--border-radius);
+  background-color: var(--card-bg-color);
+  box-shadow: var(--box-shadow);
+
+  /* REMOVED: flex-basis and min-width are no longer needed for horizontal distribution */
 }
 
 .info-box i {
   font-size: 1.5rem;
   margin-right: 1rem;
+  /* Space between icon and text */
   color: var(--text-color);
+}
+
+.info-box>div {
+  flex-grow: 0;
+  /* Prevent text block from expanding if not needed for centering */
+  text-align: center;
+  /* Ensures the text (h4 and p) itself is centered within this div */
 }
 
 .info-box h4 {
@@ -500,6 +781,8 @@ section {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
+  justify-content: center;
+  /* Centers the social icons */
 }
 
 .contact-social a {
@@ -523,8 +806,11 @@ section {
   border: 1px solid var(--text-color);
 }
 
+/* Note: The .contact-form form styles below apply to your *previous* custom form.
+   Since you're using a Google Forms button, you might not need all of them,
+   but I'll keep them here for completeness in case you reuse them. */
 .contact-form form {
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   padding: 2rem;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -562,6 +848,146 @@ section {
 .input-group textarea:focus {
   border-color: var(--text-color);
   outline: none;
+}
+
+/* In your style.css file */
+
+/* Styles for the container of the image within the blog card */
+.blog-card .blog-img {
+  width: 100%;
+  /* Ensures the image container takes full width of the card */
+  height: 150px;
+  /* <--- CHANGE THIS VALUE for a smaller image */
+  overflow: hidden;
+  /* Important: Hides parts of the image that go outside this box */
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  /* Rounded top corners, sharp bottom */
+}
+
+/* Styles for the image itself */
+.blog-card .blog-img img {
+  width: 100%;
+  /* Image fills the container's width */
+  height: 100%;
+  /* Image fills the container's height */
+  object-fit: cover;
+  /* This is key! It scales the image to cover the entire
+                          area without distorting its aspect ratio, cropping if necessary. */
+  display: block;
+  /* Removes any extra space below the image */
+}
+
+/* Ensure these base blog-card styles are also present for proper layout */
+.blog-card {
+  background-color: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.blogs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  /* Adjust gap as needed */
+  width: 100%;
+  max-width: 1200px;
+  /* Example max width for the container of blog cards */
+  margin: 0 auto;
+  /* Center the container */
+}
+
+
+/* In your style.css file */
+/* In your style.css file */
+
+/* Styles for the container of the image within the blog card */
+.blog-card .blog-img {
+  width: 100%;
+  /* Ensures the image container takes full width of the card */
+  height: 280px;
+  /* <--- INCREASED HEIGHT for a larger box/square effect */
+  overflow: hidden;
+  /* Hides parts of the image that go outside this box if cropped */
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  /* Rounded top corners, sharp bottom */
+}
+
+/* Styles for the image itself */
+.blog-card .blog-img img {
+  width: 100%;
+  /* Image fills the container's width */
+  height: 100%;
+  /* Image fills the container's height */
+  object-fit: cover;
+  /* This is key! It scales the image to cover the entire
+                          area without distorting its aspect ratio, cropping if necessary. */
+  display: block;
+  /* Removes any extra space below the image */
+}
+
+/* Ensure these base blog-card styles are also present for proper layout */
+.blog-card {
+  background-color: var(--card-bg-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* (Include other .blog-card related CSS you already have like content padding, meta, etc.) */
+/* Styles for the main image within the individual blog post */
+.blog-post-content .blog-hero-image {
+  width: 300px;
+  /* Adjust this value for desired width (e.g., 200px, 400px) */
+  height: 200px;
+  /* Adjust this value for desired height (can be different from width for non-square) */
+  object-fit: cover;
+  /* Ensures the image covers the area without distortion */
+  border-radius: 10px;
+  /* Optional: Adds slight rounded corners */
+  margin: 1.5rem auto;
+  /* Centers the image horizontally and adds vertical spacing */
+  display: block;
+  /* Important for margin: auto to work for centering */
+  box-shadow: var(--box-shadow);
+  /* Optional: Adds a subtle shadow */
+}
+
+/* You might want to add some basic styling for your blog post content itself for readability */
+.blog-post-content {
+  max-width: 800px;
+  /* Limits the width of the main content for readability */
+  margin: 2rem auto;
+  /* Centers the content block on the page */
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  line-height: 1.7;
+  /* Improve readability */
+  color: var(--text-color);
+}
+
+.blog-post-content h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+.blog-post-content .post-meta {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.blog-post-content p {
+  margin-bottom: 1rem;
 }
 
 /* Footer */
@@ -745,6 +1171,7 @@ section {
   .footer-top {
     gap: 2rem;
   }
+
   .label {
     display: none;
   }
@@ -949,6 +1376,7 @@ section {
     text-align: center;
     margin: 0 auto;
   }
+
   .contact-info h3 {
     text-align: left;
   }
@@ -1036,12 +1464,15 @@ section {
     transform: translateX(-40px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
   }
 }
+
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -1049,9 +1480,11 @@ section {
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-10px);
   }
+
   60% {
     transform: translateY(-5px);
   }
