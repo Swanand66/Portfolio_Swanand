@@ -184,7 +184,8 @@ const body = document.body;
 // Check for saved user preference
 const currentTheme = localStorage.getItem("theme");
 
-if (currentTheme === "dark") {
+// Default to dark mode if no preference is saved, or if saved is 'dark'
+if (!currentTheme || currentTheme === "dark") {
   body.classList.add("dark-mode");
   themeIcon.classList.replace("ph-moon", "ph-sun");
 }

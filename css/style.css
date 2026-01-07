@@ -333,7 +333,7 @@ section {
   box-shadow: var(--box-shadow);
   text-align: center;
   transition: var(--transition);
-  border-top: 5px solid black;
+  border-top: 5px solid var(--text-color);
 }
 
 .skill-card:hover {
@@ -343,12 +343,14 @@ section {
 .skill-card i {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: white;
+  color: var(--bg-color);
+  /* Icon color matches background (text-like reverse) */
   position: absolute;
   top: 10px;
   left: 50%;
   transform: translate(-50%, -75%);
-  background-color: var(--accent-color);
+  background-color: var(--text-color);
+  /* Circle background is text color (black/white) */
   padding: 1rem;
   border-radius: 50%;
   box-shadow: var(--box-shadow);
